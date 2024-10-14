@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+
+# Check if the PYFILE environment variable is set
+if [ -z "$PYFILE" ]; then
+  echo "Error: PYFILE environment variable is not set."
+  echo "Please set PYFILE to the name of your Python script before running this script."
+  exit 1
+fi
+
+# Verify that the Python file exists
+if [ ! -f "$PYFILE" ]; then
+  echo "Error: Python file '$PYFILE' does not exist."
+  exit 1
+fi
+
+# Explicitly specify the preferred Python interpreter (e.g., python3)
+python3 "$PYFILE"
+
+# Capture the exit code of the Python script (optional)
+python_exit_code=$?
+
+if [ $python_exit_code -ne 0 ]; then
+  # Handle non-zero exit code from Python script (optional)
+  echo "Warning: Python script '$PYFILE' exited with code $python_exit_code."
+fi
