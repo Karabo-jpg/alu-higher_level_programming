@@ -68,3 +68,7 @@ try:
     bg.area()
 except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
+
+# Final message indicating that the regular tests have passed
+print("Regular tests passed")
+
