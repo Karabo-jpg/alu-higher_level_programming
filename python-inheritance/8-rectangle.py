@@ -15,13 +15,15 @@ class Rectangle(BaseGeometry):
         height (int): The height of the rectangle.
 
     Methods:
-        __init__(self, width, height): Initializes the Rectangle with width and height.
+        __init__(self, width, height): Initializes the Rectangle with width and
+                                        height.
         __str__(self): Returns a string representation of the Rectangle.
     """
 
     def __init__(self, width, height):
         """
-        Initializes the Rectangle with the specified width and height after validation.
+        Initializes the Rectangle with the specified width and height after
+        validation.
 
         Args:
             width (int): The width of the rectangle.
