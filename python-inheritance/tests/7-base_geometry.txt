@@ -1,0 +1,25 @@
+Test Case 1:
+Calling area() on BaseGeometry should raise an exception with the message:
+"area() is not implemented".
+Expected Output:
+Exception: area() is not implemented
+
+Test Case 2:
+Calling integer_validator() with a valid integer should not raise any exceptions.
+Example: integer_validator("width", 12)
+
+Test Case 3:
+Calling integer_validator() with a string as value should raise a TypeError exception.
+Expected Output:
+[TypeError] name must be an integer
+
+Test Case 4:
+Calling integer_validator() with a value less than or equal to 0 should raise a ValueError exception.
+Example: integer_validator("width", -5)
+Expected Output:
+[ValueError] width must be greater than 0
+
+Test Case 5:
+Calling integer_validator() with 0 should raise a ValueError exception.
+Expected Output:
+[ValueError] distance must be greater than 0
