@@ -1,28 +1,27 @@
 #!/usr/bin/python3
 """
 This module defines a Rectangle class that inherits from BaseGeometry.
-
-Classes:
-    Rectangle - A class used to represent a rectangle, inheriting from BaseGeometry.
 """
 
-BaseGeometry = __import__("7-base_geometry").BaseGeometry
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
     """
     A class used to represent a Rectangle, inheriting from BaseGeometry.
 
+    Attributes:
+        width (int): The width of the rectangle.
+        height (int): The height of the rectangle.
+
     Methods:
-        __init__(self, width, height) - Initializes a Rectangle with width and height.
-        width(self) - Retrieves the width of the Rectangle.
-        height(self) - Retrieves the height of the Rectangle.
+        __init__(self, width, height): Initializes the Rectangle with width and height.
+        __str__(self): Returns a string representation of the Rectangle.
     """
 
     def __init__(self, width, height):
         """
-        Initializes the Rectangle with the specified width and
-        height after validation.
+        Initializes the Rectangle with the specified width and height after validation.
 
         Args:
             width (int): The width of the rectangle.
@@ -37,13 +36,10 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-    @property
-    def width(self):
-        """int: The width of the rectangle."""
-        return self.__width
+    def __str__(self):
+        """
+        Returns a string representation of the Rectangle.
+        """
+        return f"[Rectangle] {self.__width}/{self.__height}"
 
-    @property
-    def height(self):
-        """int: The height of the rectangle."""
-        return self.__height
 
