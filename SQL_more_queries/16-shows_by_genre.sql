@@ -9,3 +9,4 @@ ON tvsg.show_id = tvs.id
 LEFT JOIN tv_genres AS tvg
 ON tvg.id = tvsg.genre_id
 ORDER BY tvs.title, tvg.name;
+
