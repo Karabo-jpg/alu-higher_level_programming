@@ -10,3 +10,4 @@ INNER JOIN tv_genres AS tvg
 ON tvg.id = tvsg.genre_id
 WHERE tvs.title = 'Dexter'
 ORDER BY tvg.name ASC;
+
