@@ -1,3 +1,3 @@
 #!/bin/bash
-# Uses curl on the first argument and prints the size of it.
+# Fetches the content of the URL provided as the first argument and prints its size in bytes
 curl -s "$1" | wc -c
